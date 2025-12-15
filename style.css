@@ -1,0 +1,190 @@
+/* General page styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* Main container for the dashboard */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 20px;
+}
+
+h1 {
+    grid-column: 1 / -1; /* Make title span both columns */
+    text-align: center;
+    color: #1a1a1a;
+}
+
+/* "Card" styling for each widget */
+.widget {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling for the search bar */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#city-input {
+    flex: 1; /* Input box takes available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#search-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#search-btn:hover {
+    background-color: #0056b3;
+}
+/* New Location Button Style */
+#location-btn {
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+#location-btn:hover {
+    background-color: #eee;
+}
+
+/* Styling for the global event lists */
+.event-list-container {
+    margin-bottom: 20px;
+}
+.event-list-container h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.event-list-container .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.event-list-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.event-list-container li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border-left: 4px solid #007bff;
+}
+
+/* --- ALERT STYLES --- */
+
+/* New Proximity Alert (Yellow) */
+.proximity-alert {
+    background-color: #fff8e1;
+    border: 1px solid #ffc107;
+    color: #856404;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.proximity-alert p {
+    margin: 0;
+}
+
+/* Govt/NWS Alert (Red) */
+.alert-warning {
+    background-color: #fff3f3;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.alert-warning h3 {
+    color: #d8000c;
+    margin: 0 0 10px 0;
+}
+
+/* No-Alert / No-Risk Message (Green) */
+.alert-safe {
+    color: #006400;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* --- WIDGET DATA STYLES --- */
+
+#weather-result {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+#aqi-result {
+    margin-top: 15px;
+}
+.aqi-container {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.aqi-container .aqi-level {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+/* AQI Color Levels */
+.aqi-1 { background-color: #e5f9e5; color: #3a753a; } /* Good */
+.aqi-2 { background-color: #f5f9e5; color: #75753a; } /* Fair */
+.aqi-3 { background-color: #f9f0e5; color: #a37b3c; } /* Moderate */
+.aqi-4 { background-color: #f9e5e5; color: #a33c3c; } /* Poor */
+.aqi-5 { background-color: #f4e5f9; color: #7c3ca3; } /* Very Poor */
+
+
+/* Risk Forecast Styling */
+.risk-warning {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.risk-fire {
+    background-color: #fcebeb; /* Light red */
+    border: 1px solid #e0b4b4;
+    color: #a30000;
+}
+.risk-flood {
+    background-color: #ebf5fc; /* Light blue */
+    border: 1px solid #b4d4e0;
+    color: #005a8d;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; /* Stack widgets on top of each other */
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Disaster Dashboard</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Weather forecast And Global Disaster Dashboard</h1>
+        
+        <div class="widget" id="weather-widget">
+            <h2>Local Weather & Alerts</h2>
+            <p>Enter a city or use your location to get weather, alerts, AQI, and risk forecasts.</p>
+            
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn">Search</button>
+                
+                <button id="location-btn" title="Use my location">📍</button>
+            </div>
+            
+            <div id="proximity-alert-container"></div>
+
+            <div id="alert-container"></div>
+
+            <div id="weather-result"></div>
+
+            <div id="aqi-result"></div>
+
+            <div id="risk-forecast"></div>
+        </div>
+
+        <div class="widget" id="global-events">
+            <h2>Real-Time Global Events</h2>
+            
+            <div class="event-list-container">
+                <h3><span class="icon">🌍</span> Earthquakes (Top 5 in last 24h)</h3>
+                <ul id="earthquake-list">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+
+            <div class="event-list-container">
+                <h3><span class="icon">🔥</span> Active Wildfires & Volcanoes (Recent)</h3>
+                <ul id="eonet-list">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
